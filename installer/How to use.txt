@@ -1,0 +1,26 @@
+  Windows — Native .exe Installer
+
+  The Windows installer is compiled from an NSIS script into a proper CraftPanelSetup.exe.
+
+  To build the .exe:
+
+  ┌───────────────────────┬───────────────────────────────┐
+  │       Platform        │            Command            │
+  ├───────────────────────┼───────────────────────────────┤
+  │ Linux (cross-compile) │ cd installer && bash build.sh │
+  ├───────────────────────┼───────────────────────────────┤
+  │ Windows               │ cd installer && build.bat     │
+  └───────────────────────┴───────────────────────────────┘
+
+  The build scripts will install makensis if needed, do a full npm install + npm run build + npm prune --production, then compile everything
+  into a self-contained installer.
+
+  CraftPanelSetup.exe when run on Windows:
+  - Checks for and installs Node.js and Java 21 via winget if missing
+  - Extracts the pre-built app to C:\Program Files\CraftPanel
+  - Registers a Windows Task Scheduler task that starts on boot (as SYSTEM)
+  - Adds a Windows Firewall rule for port 3001
+  - Registers with Apps & Features (Add/Remove Programs)
+  - Creates Start Menu shortcuts
+  - Starts the service immediately
+  - Includes a proper Uninstall that removes everything: task, firewall rule, files, and registry entries
