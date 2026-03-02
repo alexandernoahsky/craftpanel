@@ -115,7 +115,7 @@ Enter NAS host, share name, username, password, and remote path.
 
 ### Dropbox
 1. Create an app in the [Dropbox App Console](https://www.dropbox.com/developers/apps).
-2. Add the OAuth 2 redirect URI shown in the panel (e.g. `http://localhost:3001/api/backup/oauth/dropbox/callback`).
+2. Add the OAuth 2 redirect URI shown in the panel (e.g. `http://*****:3001/api/backup/oauth/dropbox/callback`).
 3. Enter App Key + App Secret, click **Save Credentials**, then **Connect with Dropbox**.
 
 ---
