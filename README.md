@@ -42,7 +42,7 @@ A self-hosted web GUI for managing Minecraft servers. Create, start, stop, confi
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-username/craftpanel.git
+git clone https://github.com/alexandernoahsky/craftpanel.git
 cd craftpanel
 npm install
 npm run build
